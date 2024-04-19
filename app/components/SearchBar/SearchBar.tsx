@@ -157,7 +157,7 @@ export default function Search(): JSX.Element {
               value={query}
               onChange={handleSearch}
               placeholder="Cari lagu..."
-              className="search-bar text-white px-8 mx-8"
+              className="search-bar text-black px-8 mx-8"
             />
             {query.trim() !== "" && (
               <div className="mt-4">
