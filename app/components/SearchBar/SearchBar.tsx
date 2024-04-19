@@ -133,6 +133,9 @@ export default function Search(): JSX.Element {
       .writeText(selectedLyrics || lyrics)
       .then(() => {
         setCopyButtonText("Lirik Disalin");
+        setTimeout(() => {
+        setCopyButtonText("Salin Lirik"); 
+      }, 2000);
       })
       .catch(() => alert("Gagal menyalin lirik"));
   };
@@ -207,7 +210,7 @@ export default function Search(): JSX.Element {
                 <div className="flex justify-center">
                   <button
                     onClick={handleCopyClick}
-                    className="border-b-2 border-t-2 border-t-red-600 border-b-red-600 text-white font-bold py-2 px-4 rounded mt-8 transition duration-300 ease-in-out transform hover:-translate-y-1"
+                    className="border-b-2 border-t-2 border-t-red-600 border-b-red-600 text-black font-bold py-2 px-4 rounded mt-8 transition duration-300 ease-in-out transform hover:-translate-y-1"
                   >
                     {copyButtonText}
                   </button>
